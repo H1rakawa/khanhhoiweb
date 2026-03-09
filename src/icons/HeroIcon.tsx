@@ -79,3 +79,33 @@ export const ChevronDownIcon = ({
     </svg>
   );
 };
+
+export const ChristmasTreeIcon = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      viewBox="0 0 200 300"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Trunk */}
+      <rect x="90" y="270" width="20" height="30" fill="#3d2b1f" />
+      {/* Bottom Layer */}
+      <path d="M100 200 L20 270 L180 270 Z" fill="#143314" />
+      {/* Middle Layer */}
+      <path d="M100 130 L40 210 L160 210 Z" fill="#1a4d1a" />
+      {/* Top Layer */}
+      <path d="M100 60 L60 140 L140 140 Z" fill="#2d5a27" />
+      {/* Star */}
+      <path
+        d="M100 35 L105 50 L120 50 L108 60 L112 75 L100 66 L88 75 L92 60 L80 50 L95 50 Z"
+        fill="#fbbf24"
+      />
+      {/* Decorative Lights */}
+      <circle cx="80" cy="240" r="4" fill="#ef4444" opacity="0.8" />
+      <circle cx="120" cy="240" r="4" fill="#fbbf24" opacity="0.8" />
+      <circle cx="100" cy="180" r="4" fill="#3b82f6" opacity="0.8" />
+      <circle cx="85" cy="110" r="3" fill="#fbbf24" opacity="0.8" />
+    </svg>
+  );
+};

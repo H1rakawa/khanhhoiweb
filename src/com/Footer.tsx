@@ -4,33 +4,33 @@ import React from "react";
 const Footer = () => {
   const footerLinks = [
     {
-      title: "Connect",
+      title: "Kết nối",
       links: [
-        { label: "Locations", href: "#" },
-        { label: "Attend Online", href: "#" },
-        { label: "LifeGroups", href: "#" },
-        { label: "Prayer", href: "#" },
-        { label: "Events", href: "#" },
+        { label: "Địa điểm", href: "#" },
+        { label: "Trực tuyến", href: "#" },
+        { label: "Nhóm nhỏ", href: "#" },
+        { label: "Cầu nguyện", href: "#" },
+        { label: "Sự kiện", href: "#" },
       ],
     },
     {
-      title: "About",
+      title: "Giới thiệu",
       links: [
-        { label: "Who We Are", href: "#" },
-        { label: "Leadership", href: "#" },
-        { label: "Beliefs", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Contact Us", href: "#" },
+        { label: "Chúng tôi là ai", href: "#" },
+        { label: "Ban điều hành", href: "#" },
+        { label: "Niềm tin", href: "#" },
+        { label: "Tuyển dụng", href: "#" },
+        { label: "Liên hệ", href: "#" },
       ],
     },
     {
-      title: "Resources",
+      title: "Tài nguyên",
       links: [
-        { label: "Media", href: "#" },
-        { label: "Worship", href: "#" },
-        { label: "Bible App", href: "#" },
+        { label: "Truyền thông", href: "#" },
+        { label: "Thờ phượng", href: "#" },
+        { label: "Ứng dụng kinh thánh", href: "#" },
         { label: "Open Network", href: "#" },
-        { label: "Shop", href: "#" },
+        { label: "Cửa hàng", href: "#" },
       ],
     },
   ];
@@ -42,15 +42,15 @@ const Footer = () => {
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-1">
-              Open Network
+              Tài nguyên hội thánh
             </h4>
             <p className="text-white/60 text-sm">
-              Get free resources for your church through Life.Church Open
-              Network.
+              Nhận các tài nguyên miễn phí cho hội thánh của bạn thông qua mạng
+              lưới chia sẻ.
             </p>
           </div>
           <button className="w-full md:w-auto bg-transparent hover:bg-white text-white hover:text-black transition-all font-bold px-8 py-3 rounded-full uppercase tracking-widest text-[10px] border border-white/20">
-            Explore Resources
+            Khám Phá Tài Nguyên
           </button>
         </div>
       </div>
@@ -61,11 +61,11 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-8">
             <div className="space-y-4">
               <div className="font-black text-3xl italic tracking-tighter">
-                LIFE.CHURCH
+                HTTL.KHÁNH HỘI
               </div>
               <p className="text-white/50 text-sm leading-relaxed max-w-sm">
-                To lead people to become fully devoted followers of Christ. That
-                is the passion behind everything we do.
+                Dẫn dắt mọi người trở thành những môn đồ tận hiến cho Chúa Cơ
+                Đốc. Đó là niềm đam mê đằng sau mọi điều chúng tôi làm.
               </p>
             </div>
 
@@ -156,33 +156,33 @@ const Footer = () => {
                 href="#"
                 className="text-[10px] text-white/30 hover:text-white font-bold uppercase tracking-widest transition-colors"
               >
-                Privacy Policy
+                Chính Sách Bảo Mật
               </Link>
               <Link
                 href="#"
                 className="text-[10px] text-white/30 hover:text-white font-bold uppercase tracking-widest transition-colors"
               >
-                Terms of Use
+                Điều Khoản Sử Dụng
               </Link>
               <Link
                 href="#"
                 className="text-[10px] text-white/30 hover:text-white font-bold uppercase tracking-widest transition-colors"
               >
-                Cookie Preferences
+                Tùy Chọn Cookie
               </Link>
             </div>
             <p className="text-[10px] text-white/20 font-bold uppercase tracking-widest">
-              © 2024-2025 Life.Church. All rights reserved.
+              © 2024-2025 HTTL Khánh Hội. Bảo lưu mọi quyền.
             </p>
           </div>
 
           {/* Related Tags/Content */}
           <div className="mt-12 flex flex-wrap justify-center gap-3">
             {[
-              "Prayers for Strength",
-              "Example Prayers for Healing",
-              "How to Study the Bible",
-              "Bible Verse of the Day",
+              "Lời cầu nguyện có sức mạnh",
+              "Kinh Thánh mỗi ngày",
+              "Cách học Kinh Thánh",
+              "Thanh niên Khánh Hội",
             ].map((tag) => (
               <Link
                 key={tag}

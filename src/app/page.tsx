@@ -1,32 +1,16 @@
-import Navbar from "../com/home/Navbar";
-import Hero from "../com/home/Hero";
-import PeaceSection from "../com/home/PeaceSection";
-import NextSteps from "../com/home/NextSteps";
-import MoreForYou from "../com/home/MoreForYou";
-import NewToLife from "../com/home/NewToLife";
-import BibleAppSection from "../com/home/BibleAppSection";
-import Footer from "../com/Footer";
+import React from "react";
+import Navbar from "../com/Navbar";
+import HeroSection from "../com/HeroSection";
+import OurStory from "../com/OurStory";
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div>
       <Navbar />
 
-      <main className="grow">
-        <Hero />
+      <HeroSection />
 
-        <PeaceSection />
-
-        <NextSteps />
-
-        <MoreForYou />
-
-        <NewToLife />
-
-        <BibleAppSection />
-      </main>
-
-      <Footer />
+      <OurStory />
     </div>
   );
 }
