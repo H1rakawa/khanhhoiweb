@@ -9,7 +9,7 @@ const OurStory = () => {
 
   return (
     <section className="py-20">
-      <div className="container h-20 mx-auto px-6 grid grid-cols-1 md:grid-cols-2">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left side */}
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-4">
@@ -54,12 +54,12 @@ const OurStory = () => {
         </div>
 
         {/* Right side */}
-        <div className="relative h-82 md:h96 rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl">
           <Image
             src="https://plus.unsplash.com/premium_photo-1723914175304-04f9b50b13e6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Cộng đồng tin Chúa"
             fill
-            className="object"
+            className="object-cover"
           />
         </div>
       </div>
