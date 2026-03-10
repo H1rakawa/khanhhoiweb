@@ -182,6 +182,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-gray-800 py-5 text-center text-xs text-gray-600">
+        © 2023 Grace Community Church. All rights reserved.
+      </div>
     </footer>
   );
 }
