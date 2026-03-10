@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "@/com/Navbar";
-import HeroSection from "@/com/HeroSection";
-import OurStory from "@/com/OurStory";
-import NewsEvent from "@/com/NewsEvent";
-import BibleStudyCTA from "@/com/BibleStudyCTA";
+import HeroSection from "@/com/home/HeroSection";
+import OurStory from "@/com/home/OurStory";
+import NewsEvent from "@/com/home/NewsEvent";
+import BibleStudyCTA from "@/com/home/BibleStudyCTA";
 import Footer from "@/com/Footer";
 
 export default function page() {
@@ -11,13 +11,15 @@ export default function page() {
     <div>
       <Navbar />
 
-      <HeroSection />
+      <div className="pt-20">
+        <HeroSection />
 
-      <OurStory />
+        <OurStory />
 
-      <NewsEvent />
+        <NewsEvent />
 
-      <BibleStudyCTA />
+        <BibleStudyCTA />
+      </div>
 
       <Footer />
     </div>

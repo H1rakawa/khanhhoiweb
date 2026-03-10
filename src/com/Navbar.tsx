@@ -1,15 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // import Link from "next/Link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = ["Home", "About", "Events", "Ministries", "Contact"];
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [atTop, setAtTop] = useState(true);
+  const lastY = useRef(0);
+  const navLinks = ["Home", "About", "schedule", "Ministries", "Contact"];
+
+  useEffect(() => {
+    let rafId: number | null = null;
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        setAtTop(y < 20);
+        if (Math.abs(y - lastY.current) < 10) return;
+        // show when scrolling up or near top
+        setShowNavbar(y < lastY.current || y < 50);
+        lastY.current = y;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white shadow-sm">
+    <nav
+      className={`w-full fixed top-0 left-0 z-50 transform transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      } ${atTop ? "bg-white" : "bg-white/95 backdrop-blur shadow-sm"}`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

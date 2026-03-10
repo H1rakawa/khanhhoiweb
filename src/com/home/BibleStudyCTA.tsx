@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BookOpenIcon } from "../icons/HomeIcon";
+import { BookOpenIcon } from "../../icons/HomeIcon";
 
 export default function BibleStudyCTA() {
   return (
