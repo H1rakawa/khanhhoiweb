@@ -9,7 +9,12 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [atTop, setAtTop] = useState(true);
   const lastY = useRef(0);
-  const navLinks = ["Home", "About", "schedule", "Ministries", "Contact"];
+  const navLinks = [
+    { link: "/schedule", title: "Lịch sinh hoạt" },
+    { link: "/ministries", title: "Mục vụ" },
+    { link: "/Contact", title: "Liên hệ" },
+    { link: "/about", title: "Về Chúng Tôi" },
+  ];
 
   useEffect(() => {
     let rafId: number | null = null;
@@ -33,7 +38,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full fixed top-0 left-0 z-50 transform transition-transform duration-300 ${
+      className={`w-full fixed top-0 left-0 z-50 transform transition-transform duration-300 justify-center text-center ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${atTop ? "bg-white" : "bg-white/95 backdrop-blur shadow-sm"}`}
     >
@@ -57,11 +62,11 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
-                  key={link}
-                  href={`${link.toLowerCase()}`}
+                  key={link.link}
+                  href={`${link.link}`}
                   className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors"
                 >
-                  {link}
+                  {link.title}
                 </Link>
               ))}
             </div>
@@ -72,7 +77,7 @@ const Navbar = () => {
                 href="/login"
                 className="bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-blue-800 transition-colors"
               >
-                Login
+                Đăng nhập
               </Link>
             </div>
           </div>
@@ -113,12 +118,12 @@ const Navbar = () => {
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
           {navLinks.map((link) => (
             <Link
-              key={link}
-              href={`/${link.toLowerCase}`}
+              key={link.link}
+              href={`/${link.link}`}
               className="block text-gray-600 hover:text-gray-900 font-medium py-1"
               onClick={() => setIsOpen(false)}
             >
-              {link}
+              {link.link}
             </Link>
           ))}
 
@@ -126,7 +131,7 @@ const Navbar = () => {
             href="/login"
             className="block bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg text-center mt-2"
           >
-            Login
+            Đăng nhập
           </Link>
         </div>
       )}
